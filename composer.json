@@ -1,0 +1,11 @@
+{
+    "name": "jasir/unfinalizer",
+    "description": "Plugs in composer autolader and removes final keyword from autoloaded classes on fly.",
+    "authors": [
+        {
+            "name": "jasir",
+            "email": "sirjarda2@gmail.com"
+        }
+    ],
+    "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"]
+}

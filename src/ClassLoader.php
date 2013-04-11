@@ -19,7 +19,7 @@ class ClassLoader extends ClassLoaderModified {
 			foreach($this->filters as $filter) {
 				$source = call_user_func($filter, $file, $source);
 			}
-			if (strpos($source, '<?php') === 0) {
+			if (substr($source, 0, 5) === '<?php') {
 				$source = substr($source, 5);
 			}
 			eval($source);
@@ -35,7 +35,7 @@ class ClassLoader extends ClassLoaderModified {
 				$s .= $token;
 				continue;
 			}
-			if (is_array($token) && $token[0] !== 346) {
+			if (is_array($token) && $token[0] !== T_FINAL) {
 				$s .= $token[1];
 			}
 		}
